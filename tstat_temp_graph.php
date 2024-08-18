@@ -13,7 +13,7 @@ $db = new SQLite3($datadb);
 	if(!$db) {
 	  echo $db->lastErrorMsg();
 	} else {
-	  if ($debug==1){ echo "Opened database successfully<br>\n"; };
+	  if ($debug==0){ echo "Opened database successfully<br>\n"; };
 	}
 
 // The request can contain the width.  We need the width to figure out how to scale the graph. 
@@ -53,8 +53,8 @@ if (!isset($_REQUEST['days'])){
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-
-<?
+	  
+<?php
 
 // page html middle.
 print "function drawChart() { \n\n"; 
@@ -149,6 +149,7 @@ while ($row = $result->fetcharray()){
 	$db->close();
 // page html footer 
 ?>
+
         var options = {
           title: 'Thermostat History',
           legend: { position: 'bottom' },
@@ -164,14 +165,13 @@ while ($row = $result->fetcharray()){
     </script>
   </head>
   <body>
-  <?
+  <?php
     //print "Width: $width  NumRows: $num_rows  Ratio: $ratio Integer Ratio: $iratio<br>\n";
   ?>
   <div id="curve_chart" style="width: <? print $width; ?>; height: <? print $height; ?>;"></div> 
-  <? // <div id="curve_chart" style="height: 500px"></div> ?>
+  <?php // <div id="curve_chart" style="height: 500px"></div> ?>
   </body>
 </html>
-<?
-
+<?php
 // <div id="curve_chart" style="width: 900px; height: 500px"></div>
 ?>
