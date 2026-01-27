@@ -219,8 +219,13 @@ Send them via the issues tab on Github, or email me directly at jwsmythe[at]jwsm
   only ever be for me.  If you use it, or if it's useful, please let me know.  I'll put more effort
   in if there is actually an audience.   
 
+===== Notes ================================================================
+* With Chrome on linux, if the heat symbol isn't showing, you need to install NotoColorEmoji.ttf, available from Google Fonts.  It seems that is included with Windows or at least Chrome on Windows.
+
+  
 ===== Credits ================================================================
 
 * JWSmythe <a href='https://jwsmythe.com/'>https://jwsmythe.com</a> - All the code, unless otherwise noted.
 * BlueRhinos <a href='http://www.bluerhinos.co.uk'>http://www.bluerhinos.co.uk</a> - phpMQTT library.
 * Radio Thermstat Company of America <a href='https://www.radiothermostat.com/'>https://www.radiothermostat.com/</a> - API documents, and user manuals.
+
